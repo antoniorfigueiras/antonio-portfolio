@@ -20,13 +20,13 @@
 
       <div class="pt-6 flex gap-4">
         <a
-          href="mailto:teu_email@gmail.com"
+          href="mailto:antoniorfigueiras@gmail.com"
           class="bg-teal-500 hover:bg-teal-600 text-slate-900 font-bold px-6 py-3 rounded-lg transition-colors"
         >
           Contactar
         </a>
         <a
-          href="https://github.com/antoniofigueiras"
+          href="https://github.com/antoniorfigueiras"
           target="_blank"
           class="bg-slate-800 hover:bg-slate-700 text-white font-bold px-6 py-3 rounded-lg border border-slate-700 transition-colors"
         >
