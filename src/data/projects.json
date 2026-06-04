@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "VueCommerce Store",
+    "type": "E-commerce Frontend",
+    "description": "Uma loja online completa com listagem de produtos, filtros por categoria e um sistema funcional de carrinho de compras com cálculo em tempo real.",
+    "tech": ["Vue 3", "Tailwind CSS", "Pinia", "State Management"],
+    "status": "Em planeamento",
+    "githubUrl": "",
+    "liveUrl": ""
+  },
+  {
+    "id": 2,
+    "title": "CineExplorer API",
+    "type": "Integração REST API",
+    "description": "Plataforma de pesquisa de filmes e séries que consome uma API externa (TMDB). Inclui paginação, barra de pesquisa dinâmica e tratamento de erros assíncronos.",
+    "tech": ["Vue 3", "JavaScript", "Axios", "REST API"],
+    "status": "Em planeamento",
+    "githubUrl": "",
+    "liveUrl": ""
+  },
+  {
+    "id": 3,
+    "title": "Kanban Task Board",
+    "type": "Productivity App",
+    "description": "Um gestor de tarefas interativo estilo Trello. Permite criar, editar, apagar e mover tarefas entre colunas utilizando a API nativa de Drag-and-Drop.",
+    "tech": ["Vue 3", "Tailwind CSS", "Local Storage", "Drag & Drop"],
+    "status": "Em planeamento",
+    "githubUrl": "",
+    "liveUrl": ""
+  }
+]

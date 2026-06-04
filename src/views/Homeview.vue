@@ -41,9 +41,7 @@
       <h2 class="text-2xl font-bold text-white mb-6 flex items-center">
         <span class="text-teal-400 mr-3">⚡</span> O Meu Canivete Suíço
       </h2>
-
       <div class="flex flex-wrap gap-3">
-        <!-- O Vue vai repetir este <span> para cada tecnologia na tua lista -->
         <span
           v-for="tech in techStack"
           :key="tech"
@@ -53,11 +51,28 @@
         </span>
       </div>
     </section>
+
+    <!-- NOVA Secção: Projetos -->
+    <section class="mt-24">
+      <h2 class="text-2xl font-bold text-white mb-6 flex items-center">
+        <span class="text-teal-400 mr-3">🚀</span> Projetos em Destaque
+      </h2>
+
+      <!-- Grelha responsiva: 1 coluna no telemóvel, 2 colunas em ecrãs maiores -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- O Vue faz a magia aqui: repete o componente para cada projeto no JSON -->
+        <ProjectCard v-for="project in projectsData" :key="project.id" :project="project" />
+      </div>
+    </section>
   </main>
 </template>
 
 <script setup>
-// Aqui defines a tua lista de tecnologias. Se aprenderes algo novo amanhã, é só adicionar a este array!
+// 1. Importamos o componente do cartão
+import ProjectCard from '../components/ProjectCard.vue'
+// 2. Importamos a nossa "base de dados" local
+import projectsData from '../data/projects.json'
+
 const techStack = [
   'Vue 3',
   'JavaScript (ES6+)',
