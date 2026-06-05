@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  /* Força o Firefox a entender que o ambiente tem um modo escuro */
+  color-scheme: dark light;
+  /* Desliga a animação de "esticar/bouncing" no fim da página */
+  overscroll-behavior-y: none;
+}
+
+@layer base {
+  html,
+  body,
+  #app {
+    @apply h-full bg-zinc-50 dark:bg-zinc-950 m-0 p-0;
+  }
+}
