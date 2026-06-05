@@ -154,6 +154,50 @@
         </button>
       </div>
     </section>
+    <!-- Secção: Call to Action (Contacto) -->
+    <section class="mt-32 mb-10 text-center">
+      <div
+        class="inline-block mb-4 p-3 bg-indigo-50 dark:bg-indigo-900/20 rounded-2xl text-indigo-600 dark:text-indigo-400"
+      >
+        <svg
+          class="w-8 h-8"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+          ></path>
+        </svg>
+      </div>
+      <h2 class="text-3xl font-black text-zinc-900 dark:text-white tracking-tight mb-4">
+        Pronto para o próximo desafio?
+      </h2>
+      <p class="text-zinc-600 dark:text-zinc-400 max-w-lg mx-auto mb-8 leading-relaxed">
+        Estou sempre à procura de equipas de alto rendimento onde possa aplicar os meus
+        conhecimentos em engenharia de software e continuar a evoluir. Vamos conversar?
+      </p>
+
+      <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+        <a
+          href="mailto:antoniorfigueiras@gmail.com"
+          class="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-8 py-3.5 rounded-lg shadow-lg shadow-indigo-500/20 transition-all text-center"
+        >
+          Enviar Email
+        </a>
+        <a
+          href="https://linkedin.com/in/antonio-figueiras-dev"
+          target="_blank"
+          class="w-full sm:w-auto bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 text-zinc-900 dark:text-white font-bold px-8 py-3.5 rounded-lg border border-zinc-200 dark:border-zinc-700 transition-all text-center"
+        >
+          Conectar no LinkedIn
+        </a>
+      </div>
+    </section>
   </main>
 </template>
 
