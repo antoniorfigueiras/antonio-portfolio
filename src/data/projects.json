@@ -28,5 +28,29 @@
     "status": "Em planeamento",
     "githubUrl": "",
     "liveUrl": ""
+  },
+  {
+    "id": 1,
+    "title": "Platforma de Publicações Científicas",
+    "type": "Enterprise Full-Stack",
+    "status": "Concluído",
+    "description": "Aplicação web desenvolvida para um centro de investigação com o objetivo de gerir, categorizar e avaliar publicações científicas. A arquitetura inclui um backend RESTful com controlo de acessos (RBAC) baseado em diferentes perfis de utilizador, e integra um modelo LLM local (via Docker) para a geração automática de resumos documentais.",
+    "tech": ["Jakarta EE", "PostgreSQL", "Vue.js", "Nuxt.js", "Docker"]
+  },
+  {
+    "id": 2,
+    "title": "Cloudflare AI Interviewer",
+    "type": "Cloud & AI",
+    "status": "Em produção",
+    "description": "Simulador interativo de entrevistas técnicas alimentado por Inteligência Artificial. Uma arquitetura inteiramente serverless que conecta um frontend reativo a modelos de linguagem avançados no limite da rede (edge computing), proporcionando respostas em tempo real para treino de candidatos.",
+    "tech": ["React.js", "Cloudflare Workers", "Llama 3.3"]
+  },
+  {
+    "id": 3,
+    "title": "Gym Method Ecosystem",
+    "type": "Web & Mobile",
+    "status": "Concluído",
+    "description": "Ecossistema completo de gestão de ginásios. Integra um back-office web responsivo para a administração (gestão de subscrições, produtos e exercícios) com uma aplicação mobile nativa para os clientes acompanharem os seus planos de treino. Desenvolvido com comunicação direta a uma base de dados centralizada.",
+    "tech": ["PHP (Yii2)", "MySQL", "JavaScript", "Java (Android)"]
   }
 ]

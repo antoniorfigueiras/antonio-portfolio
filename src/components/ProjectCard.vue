@@ -33,7 +33,17 @@
       class="mt-auto pt-4 border-t border-zinc-100 dark:border-zinc-800 flex justify-between items-center transition-colors"
     >
       <span class="text-sm text-zinc-500 dark:text-zinc-500 italic flex items-center gap-2">
-        <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+        <!-- A cor da bolinha muda consoante o estado do projeto -->
+        <span
+          class="w-2 h-2 rounded-full"
+          :class="{
+            'bg-emerald-500': project.status === 'Concluído',
+            'bg-blue-500 animate-pulse': project.status === 'Em produção',
+            'bg-amber-500 animate-pulse':
+              project.status === 'Em planeamento' ||
+              !['Concluído', 'Em produção'].includes(project.status),
+          }"
+        ></span>
         {{ project.status }}
       </span>
       <span

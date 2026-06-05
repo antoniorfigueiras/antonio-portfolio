@@ -1,4 +1,5 @@
 <script setup>
+import TerminalSecret from './components/TerminalSecret.vue'
 import { onMounted, ref } from 'vue'
 import { RouterView, RouterLink } from 'vue-router'
 
@@ -89,5 +90,6 @@ onMounted(() => {
         </div>
       </div>
     </footer>
+    <TerminalSecret />
   </div>
 </template>

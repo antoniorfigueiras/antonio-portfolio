@@ -1,6 +1,6 @@
 <template>
   <main class="max-w-4xl mx-auto px-6 pb-20 pt-10">
-    <!-- Secção de Apresentação (Mantém-se igual) -->
+    <!-- Secção de Apresentação -->
     <section class="space-y-6">
       <h1 class="text-4xl md:text-5xl font-black tracking-tight text-zinc-900 dark:text-white">
         Olá, sou o <span class="text-indigo-600 dark:text-indigo-400">António Figueiras</span>.
@@ -37,7 +37,7 @@
       </div>
     </section>
 
-    <!-- Secção de Tech Stack (Mantém-se igual) -->
+    <!-- Secção de Tech Stack -->
     <section class="mt-24">
       <h2 class="text-2xl font-bold text-zinc-900 dark:text-white mb-6">Stack & Ferramentas</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -88,74 +88,122 @@
       </div>
     </section>
 
+    <!-- Secção: Percurso (Git Tree) -->
+    <section class="mt-24">
+      <h2 class="text-2xl font-bold text-zinc-900 dark:text-white mb-8">Percurso & Experiência</h2>
+      <div
+        class="bg-white dark:bg-zinc-900/30 p-6 md:p-8 rounded-2xl border border-zinc-200 dark:border-zinc-800/80 shadow-sm"
+      >
+        <GitTree />
+      </div>
+    </section>
+
     <!-- Secção: Projetos com Filtros -->
     <section class="mt-24">
-      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
         <h2 class="text-2xl font-bold text-zinc-900 dark:text-white">Projetos em Destaque</h2>
 
-        <!-- Botões de Filtro -->
-        <div class="flex flex-wrap gap-2">
-          <button
-            v-for="filter in availableFilters"
-            :key="filter"
-            @click="activeFilter = filter"
-            :class="[
-              'px-4 py-2 rounded-full text-sm font-medium transition-all duration-300',
-              activeFilter === filter
-                ? 'bg-indigo-600 text-white shadow-md shadow-indigo-500/20'
-                : 'bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 border border-zinc-200 dark:border-zinc-700 hover:border-indigo-500/50 dark:hover:border-indigo-500/50',
-            ]"
+        <!-- Lista Suspensa (Dropdown) -->
+        <div class="relative w-full sm:w-auto">
+          <select
+            v-model="activeFilter"
+            class="w-full sm:w-64 appearance-none bg-white dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 py-2.5 pl-4 pr-10 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-colors cursor-pointer font-medium text-sm shadow-sm"
           >
-            {{ filter }}
-          </button>
+            <option v-for="filter in availableFilters" :key="filter" :value="filter">
+              {{ filter }}
+            </option>
+          </select>
+          <!-- Ícone da seta desenhado à mão para sobrepor o default do browser -->
+          <div
+            class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-zinc-500"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </div>
         </div>
       </div>
 
       <!-- Grelha Reativa -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- O v-for agora percorre os projetos filtrados e tem uma pequena animação do Vue -->
         <TransitionGroup name="list">
-          <ProjectCard v-for="project in filteredProjects" :key="project.id" :project="project" />
+          <ProjectCard v-for="project in displayedProjects" :key="project.id" :project="project" />
         </TransitionGroup>
       </div>
 
-      <!-- Mensagem caso um filtro não tenha projetos (apenas por segurança) -->
+      <!-- Feedback caso o filtro não encontre projetos -->
       <div
-        v-if="filteredProjects.length === 0"
+        v-if="displayedProjects.length === 0"
         class="text-center py-12 text-zinc-500 dark:text-zinc-400"
       >
         Nenhum projeto encontrado nesta categoria.
+      </div>
+
+      <!-- Botão Carregar Mais -->
+      <div v-if="hasMoreProjects" class="mt-10 flex justify-center">
+        <button
+          @click="loadMore"
+          class="px-6 py-3 bg-zinc-100 dark:bg-zinc-800/50 hover:bg-zinc-200 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300 font-medium text-sm rounded-lg border border-zinc-200 dark:border-zinc-700 transition-colors shadow-sm"
+        >
+          Mostrar mais projetos
+        </button>
       </div>
     </section>
   </main>
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import ProjectCard from '../components/ProjectCard.vue'
+import GitTree from '../components/GitTree.vue'
 import projectsData from '../data/projects.json'
 
-// Estado reativo que guarda qual é o filtro selecionado no momento
+// Filtros
 const activeFilter = ref('Todos')
-
-// Lê o JSON, extrai o campo "type" de cada projeto e remove os duplicados
 const availableFilters = computed(() => {
   const types = projectsData.map((project) => project.type)
   const uniqueTypes = [...new Set(types)]
   return ['Todos', ...uniqueTypes]
 })
 
-// Propriedade calculada que atualiza a grelha automaticamente sempre que o botão muda
+// Paginação (Limite inicial)
+const visibleCount = ref(4)
+
+// Projetos filtrados por categoria
 const filteredProjects = computed(() => {
   if (activeFilter.value === 'Todos') {
     return projectsData
   }
   return projectsData.filter((project) => project.type === activeFilter.value)
 })
+
+// Projetos que vão efetivamente aparecer no ecrã (limitados pelo visibleCount)
+const displayedProjects = computed(() => {
+  return filteredProjects.value.slice(0, visibleCount.value)
+})
+
+// Verifica se há mais projetos escondidos para mostrar o botão
+const hasMoreProjects = computed(() => {
+  return visibleCount.value < filteredProjects.value.length
+})
+
+// Adiciona +4 projetos à vista ao clicar
+const loadMore = () => {
+  visibleCount.value += 4
+}
+
+// Reset ao contador sempre que se muda a categoria no Dropdown
+watch(activeFilter, () => {
+  visibleCount.value = 4
+})
 </script>
 
 <style scoped>
-/* Animação suave quando os projetos entram e saem da grelha */
 .list-enter-active,
 .list-leave-active {
   transition: all 0.4s ease;
