@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/TempView.vue/index.js'
-import ProjectView from '../views/ProjectView.vue'
+import HomeView from './views/HomeView.vue'
+import ProjectView from './views/ProjectView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -16,7 +16,7 @@ const router = createRouter({
       component: ProjectView,
     },
   ],
-  scrollBehavior(to, from, savedPosition) {
+  scrollBehavior() {
     return { top: 0 }
   },
 })
