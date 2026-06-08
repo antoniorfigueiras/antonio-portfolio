@@ -10,13 +10,16 @@
       </p>
       <div class="text-zinc-600 dark:text-zinc-400 space-y-4 max-w-2xl leading-relaxed">
         <p>
-          Sou estudante finalista de Engenharia Informática no IPLeiria, focado na construção de
-          aplicações web modernas, escaláveis e de alta performance.
+          Sou estudante finalista de Engenharia Informática no Politécnico de Leiria. Mais do que
+          decorar a framework do momento, o meu foco é perceber como o software funciona de ponta a
+          ponta — desde o desenho da base de dados e da API, até à interface que o utilizador final
+          vai usar.
         </p>
         <p>
-          Gosto de traduzir problemas complexos de negócio em código limpo e interfaces intuitivas.
-          Mais do que dominar frameworks, o meu objetivo é entregar produtos robustos com uma boa
-          arquitetura de software por trás.
+          Ao longo do curso, habituei-me a meter as mãos na massa com ecossistemas reais: a
+          desenvolver aplicações web e mobile, a lidar com problemas de segurança e a colocar código
+          a correr em infraestruturas como Docker e Kubernetes. Gosto de resolver problemas e de
+          fazer as coisas bem feitas.
         </p>
       </div>
 
@@ -39,62 +42,145 @@
 
     <!-- Secção de Tech Stack -->
     <section class="mt-24">
-      <h2 class="text-2xl font-bold text-zinc-900 dark:text-white mb-6">Stack & Ferramentas</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div
-          class="p-5 bg-white dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800/80 rounded-xl hover:border-indigo-500/30 dark:hover:border-indigo-500/30 transition-colors shadow-sm"
-        >
-          <h3
-            class="text-indigo-600 dark:text-indigo-400 font-semibold mb-4 text-sm uppercase tracking-wider"
-          >
-            Frontend
-          </h3>
-          <ul class="text-zinc-600 dark:text-zinc-400 space-y-2 text-sm">
-            <li>Vue 3 (Composition API)</li>
-            <li>JavaScript (ES6+)</li>
-            <li>Tailwind CSS / HTML5</li>
-          </ul>
-        </div>
-
-        <div
-          class="p-5 bg-white dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800/80 rounded-xl hover:border-indigo-500/30 dark:hover:border-indigo-500/30 transition-colors shadow-sm"
-        >
-          <h3
-            class="text-indigo-600 dark:text-indigo-400 font-semibold mb-4 text-sm uppercase tracking-wider"
-          >
-            Backend
-          </h3>
-          <ul class="text-zinc-600 dark:text-zinc-400 space-y-2 text-sm">
-            <li>PHP</li>
-            <li>MySQL / Bases de Dados</li>
-            <li>RESTful APIs</li>
-          </ul>
-        </div>
-
-        <div
-          class="p-5 bg-white dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800/80 rounded-xl hover:border-indigo-500/30 dark:hover:border-indigo-500/30 transition-colors shadow-sm"
-        >
-          <h3
-            class="text-indigo-600 dark:text-indigo-400 font-semibold mb-4 text-sm uppercase tracking-wider"
-          >
-            Tools & Workflow
-          </h3>
-          <ul class="text-zinc-600 dark:text-zinc-400 space-y-2 text-sm">
-            <li>Git & GitHub</li>
-            <li>Vite</li>
-            <li>Metodologias Ágeis</li>
-          </ul>
-        </div>
+      <div class="mb-8">
+        <h2 class="text-2xl font-bold text-zinc-900 dark:text-white">Ecossistema & Tecnologias</h2>
+        <p class="text-zinc-600 dark:text-zinc-400 mt-2 text-sm max-w-2xl">
+          Conjunto de tecnologias, linguagens e ferramentas que utilizo no desenho e implementação
+          de arquiteturas escaláveis.
+        </p>
       </div>
-    </section>
 
-    <!-- Secção: Percurso (Git Tree) -->
-    <section class="mt-24">
-      <h2 class="text-2xl font-bold text-zinc-900 dark:text-white mb-8">Percurso & Experiência</h2>
-      <div
-        class="bg-white dark:bg-zinc-900/30 p-6 md:p-8 rounded-2xl border border-zinc-200 dark:border-zinc-800/80 shadow-sm"
-      >
-        <GitTree />
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div
+          class="group p-6 bg-white dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-800/80 rounded-2xl hover:border-indigo-500/50 transition-all duration-300 shadow-sm hover:shadow-md relative overflow-hidden"
+        >
+          <div
+            class="absolute top-0 right-0 p-4 opacity-10 dark:opacity-20 transform translate-x-4 -translate-y-4 group-hover:scale-110 transition-transform"
+          >
+            <svg class="w-20 h-20 text-indigo-500" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+            </svg>
+          </div>
+          <h3
+            class="flex items-center text-indigo-600 dark:text-indigo-400 font-bold mb-5 text-sm uppercase tracking-widest relative z-10"
+          >
+            <span class="w-8 h-px bg-indigo-500/50 mr-3"></span> Frontend & Mobile
+          </h3>
+          <ul class="text-zinc-600 dark:text-zinc-300 space-y-3 text-sm font-medium relative z-10">
+            <li class="flex items-center">
+              <span class="w-1.5 h-1.5 rounded-full bg-indigo-400 mr-2"></span> Vue.js 3 / Nuxt.js
+              (SPA & SSR)
+            </li>
+            <li class="flex items-center">
+              <span class="w-1.5 h-1.5 rounded-full bg-indigo-400 mr-2"></span> Kotlin (Android
+              Native / ViewBinding)
+            </li>
+            <li class="flex items-center">
+              <span class="w-1.5 h-1.5 rounded-full bg-indigo-400 mr-2"></span> Tailwind CSS &
+              Shadcn Vue
+            </li>
+            <li class="flex items-center">
+              <span class="w-1.5 h-1.5 rounded-full bg-indigo-400 mr-2"></span> JavaScript (ES6+) &
+              TypeScript
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="group p-6 bg-white dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-800/80 rounded-2xl hover:border-indigo-500/50 transition-all duration-300 shadow-sm hover:shadow-md relative overflow-hidden"
+        >
+          <div
+            class="absolute top-0 right-0 p-4 opacity-10 dark:opacity-20 transform translate-x-4 -translate-y-4 group-hover:scale-110 transition-transform"
+          >
+            <svg
+              class="w-20 h-20 text-indigo-500"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"
+              />
+            </svg>
+          </div>
+          <h3
+            class="flex items-center text-indigo-600 dark:text-indigo-400 font-bold mb-5 text-sm uppercase tracking-widest relative z-10"
+          >
+            <span class="w-8 h-px bg-indigo-500/50 mr-3"></span> Backend & Data
+          </h3>
+          <ul class="text-zinc-600 dark:text-zinc-300 space-y-3 text-sm font-medium relative z-10">
+            <li class="flex items-center">
+              <span class="w-1.5 h-1.5 rounded-full bg-indigo-400 mr-2"></span> Jakarta EE (Java) /
+              Laravel (PHP)
+            </li>
+            <li class="flex items-center">
+              <span class="w-1.5 h-1.5 rounded-full bg-indigo-400 mr-2"></span> Node.js / Bun
+              (WebSockets em TR)
+            </li>
+            <li class="flex items-center">
+              <span class="w-1.5 h-1.5 rounded-full bg-indigo-400 mr-2"></span> PostgreSQL & MySQL
+              (Relacional)
+            </li>
+            <li class="flex items-center">
+              <span class="w-1.5 h-1.5 rounded-full bg-indigo-400 mr-2"></span> Arquitetura RESTful
+              & Microsserviços
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="group p-6 bg-white dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-800/80 rounded-2xl hover:border-indigo-500/50 transition-all duration-300 shadow-sm hover:shadow-md relative overflow-hidden"
+        >
+          <div
+            class="absolute top-0 right-0 p-4 opacity-10 dark:opacity-20 transform translate-x-4 -translate-y-4 group-hover:scale-110 transition-transform"
+          >
+            <svg
+              class="w-20 h-20 text-indigo-500"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+              />
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+              />
+            </svg>
+          </div>
+          <h3
+            class="flex items-center text-indigo-600 dark:text-indigo-400 font-bold mb-5 text-sm uppercase tracking-widest relative z-10"
+          >
+            <span class="w-8 h-px bg-indigo-500/50 mr-3"></span> DevOps & QA
+          </h3>
+          <ul class="text-zinc-600 dark:text-zinc-300 space-y-3 text-sm font-medium relative z-10">
+            <li class="flex items-center">
+              <span class="w-1.5 h-1.5 rounded-full bg-indigo-400 mr-2"></span> Docker & Kubernetes
+              (Orquestração)
+            </li>
+            <li class="flex items-center">
+              <span class="w-1.5 h-1.5 rounded-full bg-indigo-400 mr-2"></span> Katalon Studio &
+              Appium (Testes Auto)
+            </li>
+            <li class="flex items-center">
+              <span class="w-1.5 h-1.5 rounded-full bg-indigo-400 mr-2"></span> Git Flow & Pull
+              Requests (Git)
+            </li>
+            <li class="flex items-center">
+              <span class="w-1.5 h-1.5 rounded-full bg-indigo-400 mr-2"></span> Jira (Scrum / BDD
+              User Stories)
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -175,11 +261,13 @@
         </svg>
       </div>
       <h2 class="text-3xl font-black text-zinc-900 dark:text-white tracking-tight mb-4">
-        Pronto para o próximo desafio?
+        Procuras reforçar a equipa?
       </h2>
       <p class="text-zinc-600 dark:text-zinc-400 max-w-lg mx-auto mb-8 leading-relaxed">
-        Estou sempre à procura de equipas de alto rendimento onde possa aplicar os meus
-        conhecimentos em engenharia de software e continuar a evoluir. Vamos conversar?
+        Estou na reta final da licenciatura e à procura da oportunidade certa para iniciar a minha
+        carreira. Quero integrar um projeto onde possa aprender com malta mais experiente e
+        contribuir com bom código desde o primeiro dia. Se o meu perfil faz sentido para a tua
+        empresa, vamos falar!
       </p>
 
       <div class="flex flex-col sm:flex-row justify-center items-center gap-4">

@@ -1,6 +1,38 @@
 [
   {
     "id": 1,
+    "title": "Plataforma Bisca (Web & Distributed Backend)",
+    "type": "Full-Stack & DevOps",
+    "status": "Concluído",
+    "challenge": "Orquestração Kubernetes e Sincronização em Tempo Real",
+    "github_url": "https://github.com/antoniorfigueiras/bisca-web-spa",
+    "description": "Ecossistema distribuído para o jogo tradicional Bisca composto por um cliente SPA em Vue.js e uma infraestrutura de múltiplos microsserviços. Implementa uma API RESTful para gestão de utilizadores e transações económicas, juntamente com uma engine em tempo real via WebSockets operando como 'Single Source of Truth'. Todo o ecossistema foi contentorizado em Docker e orquestrado num cluster Kubernetes.",
+    "tech": ["Vue.js", "WebSockets", "Laravel/Node.js", "Docker", "Kubernetes", "MySQL"],
+    "images": ["/images/projects/bisca-web-main.png"]
+  },
+  {
+    "id": 2,
+    "title": "Bisca Mobile (Android Native App)",
+    "type": "Mobile Engineering",
+    "status": "Concluído",
+    "challenge": "Automação de Testes Mobile e Gestão Ágil",
+    "tech": ["Kotlin", "Android Studio", "Katalon Studio", "Firebase", "Jira", "Git"],
+    "github_url": "https://github.com/antoniorfigueiras/bisca-app",
+    "description": "Aplicação mobile nativa para Android desenvolvida em Kotlin utilizando XML Views (ViewBinding). O projeto foca-se no desenvolvimento de um motor de jogo/bot local baseado em regras lógicas tradicionais e integra sincronização de dados centralizada. Ciclo de desenvolvimento gerido via metodologias ágeis (Scrum/Jira) e validação rigorosa com testes automatizados em Katalon Studio.",
+    "images": ["/images/projects/bisca-app-main.png"]
+  },
+  {
+    "id": 3,
+    "title": "InvestigaçãoHub — Plataforma Científica",
+    "type": "Enterprise Application",
+    "status": "Concluído",
+    "description": "Aplicação empresarial desenvolvida para um Centro de Investigação. Permite catalogar, armazenar e enriquecer produções científicas (como patentes, datasets e modelos de IA) com análises críticas. Implementa um sistema estrito de segurança baseado em roles (RBAC) e regras de confidencialidade de dados com infraestrutura isolada em Docker.",
+    "tech": ["Jakarta EE", "Nuxt.js", "PostgreSQL", "Docker", "REST API", "Shadcn Vue"],
+    "github_url": "https://github.com/antoniorfigueiras/investigacaohub-dae",
+    "images": ["/images/projects/dae-dashboard.png"]
+  },
+  {
+    "id": 4,
     "title": "VueCommerce Store",
     "type": "E-commerce Frontend",
     "description": "Uma loja online completa com listagem de produtos, filtros por categoria e um sistema funcional de carrinho de compras com cálculo em tempo real.",
@@ -10,7 +42,7 @@
     "liveUrl": ""
   },
   {
-    "id": 2,
+    "id": 5,
     "title": "CineExplorer API",
     "type": "Integração REST API",
     "description": "Plataforma de pesquisa de filmes e séries que consome uma API externa (TMDB). Inclui paginação, barra de pesquisa dinâmica e tratamento de erros assíncronos.",
@@ -20,7 +52,7 @@
     "liveUrl": ""
   },
   {
-    "id": 3,
+    "id": 6,
     "title": "Kanban Task Board",
     "type": "Productivity App",
     "description": "Um gestor de tarefas interativo estilo Trello. Permite criar, editar, apagar e mover tarefas entre colunas utilizando a API nativa de Drag-and-Drop.",
@@ -30,23 +62,7 @@
     "liveUrl": ""
   },
   {
-    "id": 1,
-    "title": "Platforma de Publicações Científicas",
-    "type": "Enterprise Full-Stack",
-    "status": "Concluído",
-    "description": "Aplicação web desenvolvida para um centro de investigação com o objetivo de gerir, categorizar e avaliar publicações científicas. A arquitetura inclui um backend RESTful com controlo de acessos (RBAC) baseado em diferentes perfis de utilizador, e integra um modelo LLM local (via Docker) para a geração automática de resumos documentais.",
-    "tech": ["Jakarta EE", "PostgreSQL", "Vue.js", "Nuxt.js", "Docker"]
-  },
-  {
-    "id": 2,
-    "title": "Cloudflare AI Interviewer",
-    "type": "Cloud & AI",
-    "status": "Em produção",
-    "description": "Simulador interativo de entrevistas técnicas alimentado por Inteligência Artificial. Uma arquitetura inteiramente serverless que conecta um frontend reativo a modelos de linguagem avançados no limite da rede (edge computing), proporcionando respostas em tempo real para treino de candidatos.",
-    "tech": ["React.js", "Cloudflare Workers", "Llama 3.3"]
-  },
-  {
-    "id": 3,
+    "id": 7,
     "title": "Gym Method Ecosystem",
     "type": "Web & Mobile",
     "status": "Concluído",
